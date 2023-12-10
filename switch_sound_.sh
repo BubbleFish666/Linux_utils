@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # This script toggles sound sink (output) between HDMI and built-in speaker
+# Ref: https://askubuntu.com/a/509189
 
 HDMI_STATUS=$(cat /sys/class/drm/card0/*HDMI*/status)
 INPUTS=$(pacmd list-sink-inputs | grep index | awk '{print $2}')
